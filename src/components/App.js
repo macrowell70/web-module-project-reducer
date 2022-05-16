@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 
 import reducer, { initialState } from '../reducers/index';
-import { applyNumber, changeOperation, clearDisplay } from '../actions/index';
+import { applyNumber, changeOperation, clearDisplay, mPlus } from '../actions/index';
 
 import './App.css';
 
@@ -23,6 +23,10 @@ function App() {
     dispatch(clearDisplay())
   }
 
+  const handleClickMPlus = () => {
+    dispatch(mPlus())
+  }
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -40,7 +44,7 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
+              <CalcButton value={"M+"} onClick={() => handleClickMPlus()}/>
               <CalcButton value={"MR"}/>
               <CalcButton value={"MC"}/>
             </div>

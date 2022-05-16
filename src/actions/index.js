@@ -5,6 +5,7 @@ export const CHANGE_OPERATION = "CHANGE_OPERATION";
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY";
 export const M_PLUS = "M_PLUS";
 export const MR = "MR";
+export const MC = "MC"
 
 export const addOne = () => {
     return({type:ADD_ONE});
@@ -28,4 +29,8 @@ export const mPlus = () => {
 
 export const mr = () => {
     return({type:MR})
+}
+
+export const mc = () => {
+    return({type:MC})
 }

@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 
 import reducer, { initialState } from '../reducers/index';
-import { applyNumber, changeOperation, clearDisplay, mPlus, mr } from '../actions/index';
+import { applyNumber, changeOperation, clearDisplay, mPlus, mr, mc } from '../actions/index';
 
 import './App.css';
 
@@ -31,6 +31,10 @@ function App() {
     dispatch(mr())
   }
 
+  const handleClickMC = () => {
+    dispatch(mc())
+  }
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -50,7 +54,7 @@ function App() {
             <div className="row">
               <CalcButton value={"M+"} onClick={() => handleClickMPlus()}/>
               <CalcButton value={"MR"} onClick={() => handleClickMR()}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"MC"} onClick={() => handleClickMC()}/>
             </div>
 
             <div className="row">
